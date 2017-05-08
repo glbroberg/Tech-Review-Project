@@ -3,64 +3,41 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="bgArticle">
+    <h2 class="smallPad">Details</h2>
 
-<h2>Details</h2>
+    <div class="container ">
+        <div class="row boxForm">
+            <div class="col-md-12">
 
-<div>
-    <h4>Review</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Brand.BrandName)
-        </dt>
+                <div class="col-md-4">
+                    <h2>@Html.DisplayFor(model => model.UserName)</h2>
+                    <p>@Html.DisplayFor(model => model.TimeStamp)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Brand.BrandName)
-        </dd>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DeviceType.DevTypeName)
-        </dt>
+                <div class="col-md-4">
+                    <h3>
+                        @Html.DisplayFor(model => model.Brand.BrandName)
+                        @Html.DisplayFor(model => model.DeviceType.DevTypeName)
+                    </h3>
+                    <p>
+                        @Html.DisplayFor(model => model.Comments)
+                    </p>
+                </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.DeviceType.DevTypeName)
-        </dd>
+                <div class="col-md-4 centeredContent">
+                    <h3>Rating:</h3>
+                    <h4>
+                        @Html.DisplayFor(model => model.Rating) out of 10 <br />
+                    </h4>
+                </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Comments)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Comments)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TimeStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TimeStamp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-    </dl>
+            </div>
+        </div>
+    </div>
+    <p class="smallPad">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

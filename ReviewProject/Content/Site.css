@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:rgb(46, 46, 46);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,136 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+/* Header */
+.navBarCustom {
+    background-color:black;
+}
+
+button.navbar-toggle {
+    border: 1px solid #FFF6F0;
+}
+
+span.glyphicon {
+    color: #FFF6F0;
+}
+
+.whiteText{
+    color:white;
+}
+
+.whiteText a {
+        color:white;
+}
+
+.whiteText a:hover{
+    color:black;
+}
+
+/* Jumbotron */
+.container .jumboCustom {
+    padding: 70px 50px 70px 50px;
+    background-image: url('../Images/techpic3.jpg');
+    color:white;
+    background-size: cover;
+    border-radius:0px 0px 5px 5px;
+}
+
+.shadowBox{
+    padding:10px 10px 10px 10px;
+    text-align:center;
+    background-color:rgba(39, 39, 39, 0.70);
+    border:1px solid black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Article */
+.bgArticle{
+    background-color:white;
+    color:black;
+    font-size:12px;
+    padding-top:10px;
+    margin-bottom:0;
+    border-radius:0 0 5px 5px;
+}
+
+.articleForm{
+    padding: 40px 0 40px 0;
+}
+
+.articleForm  h2{
+    font-weight:600;
+}
+
+.picLeft{
+    display:block;
+}
+
+/* Footer */
+footer{
+    color:white;
+}
+
+/* Review Index */
+.revIndexForm{
+    background-color:white;
+    color:black;
+}
+
+.greyButton{
+    background-color:grey;
+    padding:5px;
+    border-radius:2px;
+    color:white;
+}
+
+.greyButton:hover{
+    background-color:lightgrey;
+    color:black;
+    text-decoration:none;
+}
+
+.redButton{
+    color:white;
+    padding:5px;
+    border-radius:2px;
+    background-color:red;
+}
+
+.redButton:hover{
+ background-color:rgb(239, 56, 56);;
+    color:black;
+    text-decoration:none;
+}
+
+.blueButton{
+    color:white;
+    padding:5px;
+    border-radius:2px;
+    background-color:blue;
+}
+
+.blueButton:hover{
+ background-color:lightblue;
+    color:black;
+    text-decoration:none;
+}
+
+.smallPad{
+    padding-left:10px;
+}
+
+.boxForm{
+    border:1px solid black;
+}
+
+.centeredContent{
+    text-align:center;
+}
+
+.bottomMargin{
+    margin-bottom:10px;
+    padding-bottom:10px;
 }

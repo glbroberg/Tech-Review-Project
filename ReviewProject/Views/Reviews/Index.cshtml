@@ -4,60 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2 class="whiteText">Reviews</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+   @Html.ActionLink("Add a new Review", "Create", null, new { @class="greyButton" } ) 
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Brand.BrandName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DeviceType.DevTypeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Comments)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TimeStamp)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand.BrandName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DeviceType.DevTypeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TimeStamp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+<div class="row bottomMargin ">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4 bottomMargin">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Brand.BrandName)<br />
+                    @Html.DisplayFor(modelItem => item.DeviceType.DevTypeName)
+                </h3>
+                    <p>Rating: @Html.DisplayFor(modelItem => item.Rating)</p>
+                    <p>Review by: @Html.DisplayFor(modelItem => item.UserName)<br />
+                    @Html.DisplayFor(modelItem => item.TimeStamp)</p>
+                    <p>
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { role = "button", @class = "blueButton" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { role = "button", @class = "redButton" })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { role = "button", @class = "greyButton" })
+                </p>
+            </div>
+        </div>
+    </div>
+    }
 
-</table>
+</div>
+
+
+
+
